@@ -1,30 +1,29 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEditor;
 using UnityEditor.Recorder;
 using UnityEditor.Recorder.Input;
+using System;
 
 public class RecordVideo : MonoBehaviour
 {
-    private int funword = 0;
-
+    private string funword = DateTime.Now.ToString();
     private RecorderController TestRecorderController;
+    public int VideoWidth;
+    public int VideoHeight;
     public int Length;
+    public InputField LengthField;
+    public InputField WidthField;
+    public InputField HeightField;
 
-    private void Start()
+    private void StartRecorder()
     {
+        Length = Convert.ToInt32(LengthField.text);
+        VideoWidth = Convert.ToInt32(WidthField.text);
+        VideoHeight = Convert.ToInt32(HeightField.text);
 
-    }
-
-    void Update()
-    {
-
-    }
-
-    public void StartRecorder()
-    {
-        funword++;
         var controllerSettings = ScriptableObject.CreateInstance<RecorderControllerSettings>();
         TestRecorderController = new RecorderController(controllerSettings);
         var videoRecorder = ScriptableObject.CreateInstance<MovieRecorderSettings>();
@@ -33,8 +32,8 @@ public class RecordVideo : MonoBehaviour
         videoRecorder.VideoBitRateMode = VideoBitrateMode.High;
         videoRecorder.ImageInputSettings = new GameViewInputSettings
         {
-            OutputWidth = 1920,
-            OutputHeight = 1080
+            OutputWidth = VideoWidth,
+            OutputHeight = VideoHeight
         };
         videoRecorder.AudioInputSettings.PreserveAudio = true;
         string fileName = RecordingName();
@@ -47,14 +46,14 @@ public class RecordVideo : MonoBehaviour
         TestRecorderController.StartRecording();
     }
 
-    public void StopRecorder()
+    private void StopRecorder()
     {
         TestRecorderController.StopRecording();
     }
 
-    public string RecordingName()
+    private string RecordingName()
     {
-        return string.Format("{0}/MP4Videos/video_{1}",
+        return string.Format("{0}/MP4Videos/Video_{1}",
             Application.dataPath,
             funword
         );
