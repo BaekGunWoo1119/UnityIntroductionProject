@@ -53,9 +53,10 @@ public class RecordVideo : MonoBehaviour
 
     private string RecordingName()
     {
-        return string.Format("{0}/MP4Videos/Video_{1}",
+        return string.Format("{0}/SaveExport/MP4Videos/Video_{1}",
             Application.dataPath,
             funword
         );
     }
+
 }

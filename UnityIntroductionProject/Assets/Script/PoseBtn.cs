@@ -22,6 +22,16 @@ public class PoseBtn : MonoBehaviour
         anim = GameObject.Find("UntITM1").GetComponent<Animator>();
     }
 
+    public void ChangePoseAnim_2()
+    {
+        anim = GameObject.Find("UntITM2").GetComponent<Animator>();
+    }
+
+    public void ChangePoseAnim_3()
+    {
+        anim = GameObject.Find("UntITM3").GetComponent<Animator>();
+    }
+
     public void ChangePose1()
     {
         anim.SetBool("GangnamStyle", true);

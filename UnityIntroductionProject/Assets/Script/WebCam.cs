@@ -8,7 +8,7 @@ public class WebCam : MonoBehaviour
 
     public RawImage display;
     WebCamTexture camTexture;
-    private int currentIndex = 0;
+    private int currentIndex = 1;
 
 
     private void Start()
@@ -25,8 +25,8 @@ public class WebCam : MonoBehaviour
         camTexture.Play();
     }
     // Update is called once per frame
-    void Update()
+    public void StopCam()
     {
-
+        camTexture.Stop();
     }
 }
