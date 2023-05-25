@@ -18,7 +18,7 @@ public class RecordVideo : MonoBehaviour
     public InputField WidthField;
     public InputField HeightField;
 
-    private void StartRecorder()
+    public void StartRecorder()
     {
         Length = Convert.ToInt32(LengthField.text);
         VideoWidth = Convert.ToInt32(WidthField.text);
@@ -46,7 +46,7 @@ public class RecordVideo : MonoBehaviour
         TestRecorderController.StartRecording();
     }
 
-    private void StopRecorder()
+    public void StopRecorder()
     {
         TestRecorderController.StopRecording();
     }
