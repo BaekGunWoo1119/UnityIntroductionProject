@@ -36,11 +36,20 @@ public class PoseBtn : MonoBehaviour
     {
         anim.SetBool("GangnamStyle", true);
         anim.SetBool("Sitting", false);
+        anim.SetBool("Singing", false);
     }
 
     public void ChangePose2()
     {
         anim.SetBool("GangnamStyle", false);
         anim.SetBool("Sitting", true);
+        anim.SetBool("Singing", false);
+    }
+
+    public void ChangePose3()
+    {
+        anim.SetBool("GangnamStyle", false);
+        anim.SetBool("Sitting", false);
+        anim.SetBool("Singing", true);
     }
 }
