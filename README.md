@@ -3,7 +3,6 @@
 <img src = "https://media.discordapp.net/attachments/551371669315256330/1113248039243616347/image.png?width=2286&height=1288">
 <img src = "https://media.discordapp.net/attachments/551371669315256330/1113248964154769418/-02.png?width=2290&height=1288">
 <img src = "https://media.discordapp.net/attachments/551371669315256330/1113248964523872357/-03.png?width=2290&height=1288">
-<img src = "https://media.discordapp.net/attachments/551371669315256330/1113248964523872357/-03.png?width=2290&height=1288">
 <img src = "https://media.discordapp.net/attachments/551371669315256330/1113248965194952754/-04.png?width=2290&height=1288">
 <img src = "https://media.discordapp.net/attachments/551371669315256330/1113248965912182824/-05.png?width=2290&height=1288">
 <img src = "https://media.discordapp.net/attachments/551371669315256330/1113248966809763972/-06.png?width=2290&height=1288">
